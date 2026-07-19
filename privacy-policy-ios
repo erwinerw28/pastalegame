@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pastale</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #111111;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: #222222;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #111111;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .effective-date {
+            font-style: italic;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy for Pastale</h1>
+    <div class="effective-date">Effective Date: May 31, 2026</div>
+
+    <h2>1. Introduction</h2>
+    <p>Welcome to Pastale. This Privacy Policy explains how we collect, use, and protect your information when you play our game on iOS devices. We are committed to safeguarding your privacy and ensuring complete transparency regarding the data required to operate and monetize the game.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>To provide, monitor, and maintain the Pastale experience, the following data categories are collected:</p>
+    <ul>
+        <li><strong>Identifiers (Device ID):</strong> We collect your device's unique advertising identifier (such as the Apple IDFA). This data is linked to your identity and is used for tracking purposes by our third-party advertising partners.</li>
+        <li><strong>Usage Data (Product Interaction):</strong> We collect data regarding your interactions with the advertisements shown in the game. This data is linked to your identity and is used for tracking purposes to measure ad performance.</li>
+        <li><strong>Diagnostics (Crash and Performance Data):</strong> We automatically collect anonymous crash logs and performance metrics to help us fix bugs and improve game stability. This data is entirely anonymous, is not linked to your identity, and is not used for tracking purposes.</li>
+    </ul>
+
+    <h2>3. Third-Party Advertising Partners</h2>
+    <p>Pastale is supported by third-party advertising networks. We share your Identifiers and Usage Data with these partners to serve targeted advertisements. You can review exactly how these partners handle your data by reading their official policies:</p>
+    <ul>
+        <li><strong>Unity Ads:</strong> Information regarding Unity's data collection can be found at <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://unity.com/legal/privacy-policy</a>.</li>
+        <li><strong>ironSource:</strong> Information regarding ironSource's mobile privacy practices can be found at <a href="https://cdn.iads.unity3d.com/privacy-policy/privacypolicy.html" target="_blank" rel="noopener noreferrer">https://cdn.iads.unity3d.com/privacy-policy/privacypolicy.html</a>.</li>
+        <li><strong>Google Admob:</strong> Information regarding Google Admob's privacy practices can be found at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a>.</li>
+    </ul>
+
+    <h2>4. App Tracking Transparency (iOS)</h2>
+    <p>For users on iOS devices, we strictly adhere to Apple's App Tracking Transparency framework. Before we collect your Device ID or Product Interaction data for targeted advertising, Pastale will ask for your explicit permission via a system prompt. If you choose to decline tracking, you will still receive advertisements, but they will be generic and not personalized based on your activity across other companies' apps and websites.</p>
+
+    <h2>5. In-App Purchases</h2>
+    <p>Pastale offers an optional "Remove Ads" In-App Purchase. All financial transactions are securely processed entirely through Apple's App Store. We do not collect, process, or store your credit card information, billing address, or personal financial details on our own servers.</p>
+
+    <h2>6. Data Deletion and Your Rights</h2>
+    <p>Because Pastale does not mandate user accounts or logins, your data is primarily managed by your device settings and our advertising partners. You have the right to request the deletion of your personal data or opt out of targeted advertising at any time. You can reset your advertising identifiers or disable tracking directly through your device settings (Settings &gt; Privacy &amp; Security &gt; Tracking).</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any further questions about this Privacy Policy, your data rights, or how we handle your information, please contact us at <a href="mailto:erwinerw28@gmail.com">erwinerw28@gmail.com</a>.</p>
+</div>
+
+</body>
+</html>

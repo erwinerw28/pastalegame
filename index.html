@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastale | Run, Communicate, Conquer</title>
+    <style>
+        @font-face {
+            font-family: 'Crayon';
+            src: url('fonts/DKCrayonCrumble-ddll.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Base Styles & Pastel Theme */
+        :root {
+            --purple: #281243;
+            --pastel-purple: #B593B9;
+            --text-dark: #2C3E50;
+            --text-light: #FFFFFF;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #FDFBF7;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            font-family: 'Crayon', sans-serif;
+            font-size: 24px;
+        }
+
+        .h1, .h2, .h3, .logo, .tagline, .cta-button, .demo-btn {
+            font-family: 'Crayon', 'Comic Sans MS', cursive, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: var(--text-light);
+            box-shadow: 0 4px 6px rgba(40, 18, 67, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 42px; /* Increased */
+            color: var(--purple);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            background: linear-gradient(135deg, var(--purple), var(--pastel-purple));
+            color: var(--text-light);
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 72px; /* Increased */
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            color: var(--text-light);
+            line-height: 1.1;
+        }
+
+        .tagline {
+            font-size: 32px; /* Increased */
+            margin-bottom: 20px;
+            color: var(--pastel-purple);
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 22px; /* Increased */
+            margin-bottom: 35px;
+            line-height: 1.6;
+            color: #EAE2EC;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--pastel-purple);
+            color: var(--purple);
+            padding: 15px 35px;
+            font-size: 28px; /* Increased */
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            background-color: var(--text-light);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .hero-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: transform 0.5s ease;
+            border: 4px solid var(--pastel-purple);
+        }
+
+        .hero-image-container img:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 52px; /* Increased */
+            margin-bottom: 50px;
+            color: var(--purple);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--text-light);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(40, 18, 67, 0.08);
+            border: 2px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pastel-purple);
+            background-color: #FDFBFE;
+        }
+
+        .feature-icon {
+            font-size: 50px; /* Increased */
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 32px; /* Increased */
+            color: var(--purple);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            font-size: 24px; /* Ensured readability */
+        }
+
+        /* Interactive Demo Section */
+        .interactive-demo {
+            padding: 80px 10%;
+            background-color: var(--pastel-purple);
+            text-align: center;
+            color: var(--purple);
+        }
+
+        .interactive-demo h2 {
+            font-size: 52px; /* Increased */
+            color: var(--purple);
+            margin-bottom: 30px;
+        }
+
+        #demo-box {
+            background-color: var(--purple);
+            color: var(--text-light);
+            padding: 50px 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(40, 18, 67, 0.3);
+        }
+
+        #demo-box h3 {
+            font-size: 32px; /* Increased */
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .demo-btn {
+            background-color: var(--pastel-purple);
+            color: var(--purple);
+            border: none;
+            padding: 15px 30px;
+            font-size: 26px; /* Increased */
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .demo-btn:hover {
+            background-color: var(--text-light);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--purple);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 10%;
+            font-size: 18px; /* Increased */
+        }
+
+        footer p {
+            margin: 8px 0;
+            color: var(--pastel-purple);
+        }
+
+        .social-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #EAE2EC;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero h1 {
+                font-size: 56px;
+            }
+            .tagline {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Pastale</a>
+        <a href="#download" class="cta-button" style="padding: 10px 20px; font-size: 14px;">Get it now</a>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dive into the World of Pastale</h1>
+            <div class="tagline">Run, Communicate, Conquer.</div>
+            <p>Team up with 2-5 friends in this thrilling 2D sidescroller adventure. Reclaim the precious amulet, jump over obstacles, and outrun the relentless giant eraser before it wipes you out!</p>
+            <a href="https://apps.apple.com/id/app/pastale/id6733252780" target="_blank" class="cta-button" id="download">Download on Play Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.AbhinayaWisdomStudio.Pastale" target="_blank" class="cta-button" style="margin-top: 10px">Download on App Store</a>
+        </div>
+        <div class="hero-image-container">
+            <!-- Placeholder for gameplay screenshot or character -->
+            <img src="Hero-image.png" alt="Pastale Game Preview">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Adrenaline-Packed Teamwork</h2>
+        <div class="feature-grid">
+            <div class="feature-card" onclick="alert('Invite up to 4 friends to outrun the eraser together!')">
+                <div class="feature-icon">🏃‍♂️</div>
+                <h3>2-5 Player Co-op</h3>
+                <p>Jump, flip, and dodge obstacles as a team of brave chalks trying to escape the eraser's grasp.</p>
+            </div>
+            <div class="feature-card" onclick="alert('Communication is key to surviving Panic Mode!')">
+                <div class="feature-icon">⚠️</div>
+                <h3>Panic Mode</h3>
+                <p>Brace yourself when the eraser pauses! Ground blocks will start disappearing, and you'll need to react fast.</p>
+            </div>
+            <div class="feature-card" onclick="alert('Hold the amulet to guide your team to safety!')">
+                <div class="feature-icon">🔮</div>
+                <h3>The Forecaster</h3>
+                <p>Whoever holds the amulet becomes the Forecaster. Warn your teammates about safe paths to avoid falling into the void!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive JS Section -->
+    <section class="interactive-demo">
+        <h2>Want a Survival Tip?</h2>
+        <div id="demo-box">
+            <h3 id="demo-text">Tap the button to reveal a gameplay tip!</h3>
+            <button class="demo-btn" onclick="revealTip()">Reveal Tip</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/pastale.game" target="_blank" class="social-link">@pastale.game</a></p>
+        <br>
+        <p>&copy; 2026 Encore Studio. All rights reserved.</p>
+        <p><small>Available on iOS, iPadOS, Android, macOS, and Apple TV. Controller Supported.</small></p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Array of random tips to show interactivity
+        const gameTips = [
+            "The player with the amulet is the Forecaster! Listen to them to avoid disappearing blocks.",
+            "Watch out for Panic Mode—Fill outline to stop it!",
+            "You can connect your PlayStation, Xbox, or MFi controller for a smoother escape.",
+            "Teamwork is essential. Communicate quickly or risk falling into the void!",
+            "Rainy Running is coming soon! It introduces brand new mechanics that makes your team bonds stronger"
+        ];
+
+        function revealTip() {
+            const textBox = document.getElementById('demo-text');
+            // Pick a random tip
+            const randomTip = gameTips[Math.floor(Math.random() * gameTips.length)];
+            
+            // Add a little fade out/in effect
+            textBox.style.opacity = 0;
+            
+            setTimeout(() => {
+                textBox.innerText = randomTip;
+                textBox.style.opacity = 1;
+                textBox.style.transition = "opacity 0.5s ease";
+            }, 200);
+        }
+    </script>
+</body>
+</html>
